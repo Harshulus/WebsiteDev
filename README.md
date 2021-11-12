@@ -1,8 +1,8 @@
 <p align="center"><img src="static/img/Endeavour3.png" alt="Logo" width="300"></p>
 
-## About Endeavour
+## About Website
 
-The Endeavour Group continually focuses on creating an online educational platform that caters for the needs of The University of Sydney Students. 
+An online educational platform that caters for the needs of The University of Sydney Students. 
 Specifically, the website contains free information regarding website design and development. 
 
 ### Coding languages our site will teach
