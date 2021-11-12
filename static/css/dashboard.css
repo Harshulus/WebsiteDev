@@ -1,0 +1,86 @@
+.profile {
+    width:80%
+}
+
+.profile p {
+    display:inline;
+}
+
+.profile h3, h2 {
+    display:inline;
+    padding-right:5px;
+}
+
+.main_body {
+    margin:25px;
+}
+
+.main_body ul {
+    margin: 10px;
+    padding-left: 25px;
+}
+
+.bar_container {
+    padding-top: 7px;
+    padding-left: 10px;
+}
+
+.bar_behind {
+    background-color: rgb(158, 158, 158); 
+    width: 560px;
+}
+
+.bar {
+    background-color: rgb(85, 214, 170); 
+    padding: 7px; 
+    text-align: right; 
+    width: 20%;
+}
+
+.score p {
+    display:inline;
+    font-size: 22px;
+}
+
+.score h2 {
+    display:inline;
+    padding-right:5px;
+}
+
+.dashboard_column1 {
+    float:left;
+    width: 80%
+}
+
+.dashboard_column2 {
+    float:left;
+    width: 15%
+}
+
+.admin_panels {
+    padding-left: 15px;
+}
+
+.admin_add_user_input input {
+    width: 32%
+}
+
+.admin_col1 {
+    float: left;
+    width: 24%
+}
+
+.admin_col2 {
+    float: left;
+    width: 24%
+}
+
+.admin_col3 {
+    float: left;
+    width: 24%
+}
+
+.admin_col4 {
+    float: left;
+    width: 24%
+}

@@ -1,0 +1,62 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.post_bottom {
+    display: flex;
+    color: rgb(211, 211, 211);
+    font-size: 14px;
+}
+
+.top_comment {
+    display: flex;
+    color: rgb(211, 211, 211);
+    font-size: 14px;
+}
+
+h1, h3, ol {
+    margin: 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.time {
+    padding: 0 10px;
+}
+
+.content {
+    padding: 10px 40px;
+}
+
+.comment_time {
+    padding-left: 10px;
+}
+
+.post_row {
+    padding: 5px 0;
+}
+
+.post {
+    padding: 10px 40px;
+}
+
+.comment_input input {
+    width: 60%;
+    height: 80px;
+}
+
+.comment_btn input {
+    display: block;
+    margin: 10px 0;
+}
+
+.comments {
+    margin: 40px 0;
+}
+
+.comment {
+    margin: 20px 0;
+}

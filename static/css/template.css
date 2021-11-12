@@ -1,0 +1,60 @@
+html {
+    background-color: #e7e7e7;
+}
+
+header {
+    background-color: #4b4b4b;
+}
+
+body {
+    position: relative;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding-top: 68px;
+    padding-right: 5px;
+}
+  
+nav a {
+    display: block;
+    padding: 10px;
+    background-color: #4b4b4b;
+    color: white;
+    font-size: 18px;
+}
+
+.logo {
+    width: 200px;
+    padding: 10px 5px;
+}
+
+main {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 200px; /* double height of footer */
+}
+
+footer {
+    background-color: #bbbbbb;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+footer p {
+    padding-left: 10px;
+}

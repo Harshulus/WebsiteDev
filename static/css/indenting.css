@@ -1,0 +1,19 @@
+div.IndentFirst {
+    text-indent: 50px;
+  }
+  
+div.IndentSecond {
+    text-indent: 50px;
+  }
+  
+div.IndentThird {
+    text-indent: 30%;
+  }
+
+div.IndentFourth{
+    text-indent: 30%;
+  }
+
+div.IndentFifth{
+    text-indent: 30%;
+  }

@@ -1,0 +1,44 @@
+.message_box {
+    margin: 10px 20px;
+    background-color: rgb(61, 61, 61);
+    border: 1px solid rgb(153, 153, 153);
+    width: 70%;
+    height: 400px;
+    overflow-x: auto;
+}
+
+/* .send_message textarea {
+    margin: 10px 20px;
+    width: 70%;
+    height: 80px;
+} */
+
+.bottom_message {
+    display: flex;
+    color: rgb(211, 211, 211);
+    font-size: 14px;
+}
+
+.content {
+    margin: 0;
+}
+
+.time {
+    padding-left: 10px;
+}
+
+/* button {
+    display: block;
+    margin: 5px 20px;
+} */
+
+.message_input input {
+    margin: 10px 20px;
+    width: 70%;
+    height: 80px;
+}
+
+.message_btn button {
+    display: block;
+    margin: 5px 20px;
+}

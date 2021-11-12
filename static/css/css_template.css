@@ -1,0 +1,24 @@
+.contentmain pre {
+    margin: 10px 20px;
+    font-size: 15px;
+    background-color: rgb(61, 61, 61);
+    border: 1px solid rgb(153, 153, 153);
+    padding: 5px;
+    max-width: min-content;
+    height: 1320px;
+    overflow-x: auto;
+}
+
+.left {
+    float: left;
+    width: 59%;
+}
+
+.right {
+    float: left;
+    width: 41%;
+}
+
+.interactive {
+    padding-left: 20px;
+}
