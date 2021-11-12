@@ -23,14 +23,3 @@ python3 server.py
 python server.py
 ```
 
-<br>
-
-## Developers
-
-* Aashika Agarwal
-* Harshini Jayakumar
-* Solaiman Hossain
-* Shashwat Gupta
-* Raymond Ton
-
-<br>
