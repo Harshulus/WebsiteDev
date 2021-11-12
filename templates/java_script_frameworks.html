@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/contents.css">
+<link rel="stylesheet" href="css/javascriptbasics.css">
+
+<body>
+    <div class="sidenav">
+      <h1>Contents</h1>
+      <button class="dropdown-btn">Introduction to Web Development
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/web_works">How the web works</a>
+        <a href="/intro">Introduction to Web Designing</a>
+        <a href="/run_files">Running HTML and CSS Files</a>
+      </div>
+
+      <button class="dropdown-btn">HTML
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/intro_to_html">Introduction to HTML</a>
+        <a href="/metadata">Metadata in HTML</a>
+        <a href="/textformat">Structure and Text Fomatting in HTML</a>
+        <a href="/semantics">HTML Semantics</a>
+        <a href="/html_forms">HTML Web Forms</a>
+      </div>
+      <button class="dropdown-btn">CSS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/basics_of_css">Basics of CSS</a>
+        <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+        <a href="/css_template">CSS Structure Template</a>
+      </div>
+      <button class="dropdown-btn">JavaScript
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/java_script_basics">What is JavaScript</a>
+        <a href="/java_script_objects">JavaScript Objects</a>
+        <a href="/java_script_frameworks">Web Frameworks</a>
+      </div>
+      <button class="dropdown-btn">Other
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/questions">Questions</a>
+      </div>
+    </div>
+
+    <div class="contentmain">
+        <h1 style="color:#3399FF;">JavaScript Web Frameworks</h1>
+        <p> 
+            <li>JavaScript framework is an application framework written in JavaScript. </li>
+            <li>A developer does not call a framework; instead, the framework calls and uses the code in some particular way.</li>
+            <li>Example: AngularJS, Ember.js, Meteor.js, & Vue.js.</li>
+        </p>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <div class="content_btn">
+      <a href="/java_script_objects"class="previous">&laquo; Previous</a>
+      <a href="/questions" class="next">Next &raquo;</a>
+    </div>
+</body>

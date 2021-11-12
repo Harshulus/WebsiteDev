@@ -1,0 +1,107 @@
+<link rel="stylesheet" href="css/messages.css">
+<body>
+    <div class="main_body">
+        <div class="messages_top">
+            <h1 style="color:#3399FF">Direct Messages</h1>
+        </div>
+        <h2 style="color:#55D6AA">Inbox</h2>
+        <div class="message_box">
+            
+        </div>
+        
+
+        <br><br><hr><br><br>
+
+        <h2 style="color:#55D6AA">Send a message</h2>
+        <div class="send_message">
+            <form action="/messages" method="post">
+                <label for="usernames">Choose a user to message: </label>
+                <select name="usernames" id="usernames">
+                    
+                </select>
+                <br>
+            
+                <div class="message_input">
+                    <input name="message" type="text" id="msg">
+                </div>
+                <br>
+                <div class="message_btn">
+                    <input value="Message" type="submit">
+                </div>
+            </form>
+        </div>
+        <br>
+
+        <script>
+            function addMessage(message) {
+                var html = `
+                <div class="message">
+                    <p class="content">
+                        ${message.content}
+                    </p>
+                    <div class="bottom_message">
+                        <p class="sender">
+                            ${message.sender}
+                        </p>
+                        <p class="time">
+                            ${message.date}
+                        </p>
+                    </div>
+                    <hr>
+                </div>
+                `
+                container.insertAdjacentHTML("beforeend", html);
+            }
+
+            function getCookie(cookieName) {
+                var name = cookieName + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var cookies = decodedCookie.split(';');
+                for(var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i];
+                    while (cookie.charAt(0) == ' ') {
+                        cookie = cookie.substring(1); // remove whitespace
+                    }
+                    if (cookie.indexOf(name) == 0) {  // cookie matches from the array of cookies
+                        return cookie.substring(name.length, cookie.length);
+                    }
+                }
+                return "";
+            }
+
+            var all_messages = ${all_messages};
+
+            var container = document.querySelector(".message_box");
+            for (let message of all_messages) {
+                if (message.recipient == getCookie("account")) {
+                    addMessage(message)
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            var all_users = ${users};
+            var username_downdown = document.getElementById('usernames');
+            for (let user of all_users) {
+                var opt = document.createElement('option');
+                opt.innerHTML = user;
+                opt.value = user;
+                username_downdown.appendChild(opt);
+            }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>
+            $('form').submit(function () {
+
+                // Get the message content and trim it
+                var msg = $.trim($('#msg').val());
+
+                // Check if empty of not
+                if (msg == '') {
+                    alert('Required to have some content.');
+                    $('input[name="message"]').val("");
+                    return false;
+                }
+            });
+        </script>
+    </div>
+</body>

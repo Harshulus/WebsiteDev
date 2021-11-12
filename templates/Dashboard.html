@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="css/dashboard.css">
+
+<body>
+	<div class="main_body">
+		<h1 style="color: #3399FF;">Dashboard</h1>
+		<div class=dashboard_row>
+			<div class="dashboard_column1">
+				<div class="profile">
+					<img src="img/blank_profile.png" alt="Profile Picture" style="width:180px; padding-left:20px; padding-right:10px;" align="left">
+					<h3>Name:</h3>
+					<p>${name}</p><br>
+					<h3>Age:</h3>
+					<p>20</p><br>
+					<h3>Degree:</h3>
+					<p>Bachelor of Advanced Computing</p><br>
+					<h3>Bio:</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+						in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						Excepteur sint occaecat cupidatat non proident, 
+						sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+			<div class="dashboard_column2">
+				Want to logout?
+				<form action="/logout" method="get">
+					<input value="Logout" type="submit" />
+				</form>
+
+				<br>
+
+				<form action="/messages" method="get">
+					<input value="Messages" type="submit" />
+				</form>
+			</div>
+		</div>
+
+		<br clear="left"> <!--force the text below the image rather than continue to the side it-->
+		<br><hr><br>
+
+		<div class="score">
+			<h2>Score:</h2>
+			<p>1650</p>
+		</div>
+		<br>
+		
+		<h2>Course progress:</h2>
+		<div class="bar_container">
+			<div class="bar_behind">
+				<div class="bar">20%</div>
+			</div>
+		</div>
+		<br>
+		
+		<h2>Sections Completed:</h2>
+		<ul>
+			<li>Lorem ipsum</li>
+			<li>Lorem ipsum</li>
+			<li>Lorem ipsum</li>
+		</ul>
+		
+	</div>
+</body>

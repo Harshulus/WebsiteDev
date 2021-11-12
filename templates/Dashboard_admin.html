@@ -1,0 +1,170 @@
+<link rel="stylesheet" href="css/dashboard.css">
+
+<body>
+	<div class="main_body">
+		<h1 style="color: #3399FF;">Dashboard</h1>
+		<div class=dashboard_row>
+			<div class="dashboard_column1">
+				<div class="profile">
+					<img src="img/blank_profile.png" alt="Profile Picture" style="width:180px; padding-left:20px; padding-right:10px;" align="left">
+					<h3>Name:</h3>
+					<p>${name}</p><br>
+					<h3>Age:</h3>
+					<p>20</p><br>
+					<h3>Degree:</h3>
+					<p>Bachelor of Advanced Computing</p><br>
+					<h3>Bio:</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+						in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						Excepteur sint occaecat cupidatat non proident, 
+						sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+			<div class="dashboard_column2">
+				Want to logout?
+				<form action="/logout" method="get">
+					<input value="Logout" type="submit" />
+				</form>
+
+				<br>
+
+				<form action="/messages" method="get">
+					<input value="Messages" type="submit" />
+				</form>
+
+			</div>
+		</div>
+
+		<br clear="left"> <!--force the text below the image rather than continue to the side it-->
+		<br><hr><br>
+		
+		<div class="admin_col1">
+			<h3>Mute User</h3>
+			<div class="admin_panels">
+				<form action="/mute_user" method="post">
+					<label for="mute_user_usernames">Choose a user to mute: </label>
+					<select name="mute_user_usernames" id="mute_user_usernames">
+
+					</select>
+					<br>
+					<input value="Mute" type="submit" />
+				</form>
+			</div>
+		</div>
+
+		<div class="admin_col2">
+			<h3>Unmute User</h3>
+			<div class="admin_panels">
+				<form action="/unmute_user" method="post">
+					<label for="unmute_user_usernames">Choose a user to unmute: </label>
+					<select name="unmute_user_usernames" id="unmute_user_usernames">
+
+					</select>
+					<br>
+					<input value="Unmute" type="submit" />
+				</form>
+			</div>
+		</div>
+
+		<!-- <br> -->
+
+		<div class="admin_col3">
+			<h3>Add User</h3>
+			<div class="admin_panels">
+				<form id="add_user" action="/add_user" method="post">
+					<div class="admin_add_user_input">
+					Username: <input name="add_username" type="text" id="add_user_username" />
+					<br>
+					Password: <input name="add_password" type="password" id="add_user_password" />
+					</div>
+					<input value="Add" type="submit" />
+				</form>
+			</div>
+		</div>
+
+		<!-- <br> -->
+		
+		<div class="admin_col4">
+			<h3>Remove User</h3>
+			<div class="admin_panels">
+				<form action="/remove_user" method="post">
+					<label for="remove_user_usernames">Choose a user to remove: </label>
+					<select name="remove_user_usernames" id="remove_user_usernames">
+
+					</select>
+					<br>
+					<input value="Remove" type="submit" />
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript">
+            var unmuted_users = ${unmuted_users};
+            var mute_user_dropdown = document.getElementById('mute_user_usernames');
+			for (let user of unmuted_users) {
+                var opt = document.createElement('option');
+                opt.innerHTML = user;
+                opt.value = user;
+                mute_user_dropdown.appendChild(opt);
+            }
+
+			var muted_users = ${muted_users};
+			var unmute_user_dropdown = document.getElementById('unmute_user_usernames');
+			for (let user of muted_users) {
+                var opt = document.createElement('option');
+                opt.innerHTML = user;
+                opt.value = user;
+                unmute_user_dropdown.appendChild(opt);
+            }
+
+			var all_users = ${users};
+			var remove_user_dropdown = document.getElementById('remove_user_usernames');
+            for (let user of all_users) {
+                var opt = document.createElement('option');
+                opt.innerHTML = user;
+                opt.value = user;
+                remove_user_dropdown.appendChild(opt);
+            }
+        </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>
+            $('#add_user').submit(function () {
+
+                // Get the message content and trim it
+                var add_user_username = $.trim($('#add_user_username').val());
+                var add_user_password = $.trim($('#add_user_password').val());
+
+                // Check if empty of not
+                if (add_user_username == '') {
+                    alert('Username cannot be empty.');
+                    $('input[name="add_user_username"]').val("");
+                    return false;
+                }
+                else if (add_user_password == '') {
+                    alert('Password cannot be empty.');
+                    $('input[name="add_user_password"]').val("");
+                    return false;
+                }
+				
+				username_arr = add_user_username.split("")
+				password_arr = add_user_password.split("")
+				for (i = 0; i < username_arr.length; i++) {
+					if (username_arr[i] == ' ') {
+						alert('Username cannot have a space.');
+						return false;
+					}
+				}
+				for (i = 0; i < password_arr.length; i++) {
+					if (password_arr[i] == ' ') {
+						alert('Password cannot have a space.');
+						return false;
+					}
+				}
+            });
+			
+        </script>
+	</div>
+</body>

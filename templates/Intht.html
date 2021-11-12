@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="css/contents.css"> 
+<body>
+  <div class="sidenav">
+    <h1>Contents</h1>
+        <button class="dropdown-btn">Introduction to Web Development
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/web_works">How the web works</a>
+          <a href="/intro">Introduction to Web Designing</a>
+          <a href="/run_files">Running HTML and CSS Files</a>
+        </div>
+
+        <button class="dropdown-btn">HTML
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/intro_to_html">Introduction to HTML</a>
+          <a href="/metadata">Metadata in HTML</a>
+          <a href="/textformat">Structure and Text Fomatting in HTML</a>
+          <a href="/semantics">HTML Semantics</a>
+          <a href="/html_forms">HTML Web Forms</a>
+        </div>
+        <button class="dropdown-btn">CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/basics_of_css">Basics of CSS</a>
+          <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+          <a href="/css_template">CSS Structure Template</a>
+        </div>
+        <button class="dropdown-btn">JavaScript
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/java_script_basics">What is JavaScript</a>
+          <a href="/java_script_objects">JavaScript Objects</a>
+          <a href="/java_script_frameworks">Web Frameworks</a>
+        </div>
+        <button class="dropdown-btn">Other
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/questions">Questions</a>
+        </div>
+  </div>
+  <!--WRITE COMMENT HERE-->
+  <!--Change the class so that you have more flexibility in HTML (note-->
+  
+  
+  
+  
+  
+  <div class="contentmain">
+    <h1 style="color:#3399FF;">Introduction to HTML</h1>
+    <h3 style="color:#55D6AA">About HTML</h3>
+    <p>
+      <ul>
+        <li>HTML stands for Hyper Text Markup Language.</li>
+        <li>HTML is the standard markup language for creating Web pages.</li>
+        <li>HTML describes the structure of a Web page.</li>
+        <li>HTML consists of a series of elements.</li>
+        <li>HTML elements tell the browser how to display the content.</li>
+        <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+      </ul>
+        
+    </p>
+
+      </p>
+      <br>
+      
+      <h3 style="color:#55D6AA">What is an Element?</h3>
+      <div class="content-padding">
+        <p>The HTML element is everything from the start tag to the end tag:</p> 
+        <mark><p style="color:#ffffff">&lt;p&gt;This is an element&lt;/p&gt;</p></mark>
+        <p>
+        Below is a visualization of an HTML page structure:
+        </p>
+        <img src="img/Layout.png" alt="HTML tutorial" style="width:600px; padding: 60px">
+
+        <br><br>
+      </div>
+      
+      <h3 style="color:#55D6AA">Web Browsers</h3>
+      <div class="content-padding">
+        <p>The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly.
+
+        A browser does not display the HTML tags, but uses them to determine how to display the document:</p>
+      </div>
+  </div>
+  <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+    <div class="content_btn">
+      <a href="/run_files"class="previous">&laquo; Previous</a>
+      <a href="/metadata" class="next">Next &raquo;</a>
+    </div>
+</body>
+

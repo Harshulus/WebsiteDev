@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/contents.css">
+<link rel="stylesheet" href="css/textFormatting.css">
+
+<body>
+    <div class="sidenav">
+      <h1>Contents</h1>
+      <button class="dropdown-btn">Introduction to Web Development
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/web_works">How the web works</a>
+        <a href="/intro">Introduction to Web Designing</a>
+        <a href="/run_files">Running HTML and CSS Files</a>
+      </div>
+
+      <button class="dropdown-btn">HTML
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/intro_to_html">Introduction to HTML</a>
+        <a href="/metadata">Metadata in HTML</a>
+        <a href="/textformat">Structure and Text Fomatting in HTML</a>
+        <a href="/semantics">HTML Semantics</a>
+        <a href="/html_forms">HTML Web Forms</a>
+      </div>
+      <button class="dropdown-btn">CSS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/basics_of_css">Basics of CSS</a>
+        <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+        <a href="/css_template">CSS Structure Template</a>
+      </div>
+      <button class="dropdown-btn">JavaScript
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/java_script_basics">What is JavaScript</a>
+        <a href="/java_script_objects">JavaScript Objects</a>
+        <a href="/java_script_frameworks">Web Frameworks</a>
+      </div>
+      <button class="dropdown-btn">Other
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/questions">Questions</a>
+      </div>
+    </div>
+
+    <div class="contentmain">
+        <h1 style="color:#3399FF;">Elements and Structure In HTML</h1>
+
+        <h2 style="color:#55D6AA">Structure of Simple HTML Document: </h2>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+            
+    &lt;body&gt;
+        &lt;h1&gt;This is a heading&lt;/h1&gt;
+        &lt;p&gt;This is a paragraph&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h2 style="color:#55D6AA">Elements Explained: </h2>
+
+        <ul>
+            <li>The <mark>&lt;!DOCTYPE html&gt;</mark> declaration defines that this document is an HTML5 document</li>
+            <li>The <mark>&lt;html&gt;</mark> element is the root element of an HTML page</li>
+            <li>The <mark>&lt;head&gt;</mark> element contains meta information about the HTML page</li>
+            <li>The <mark>&lt;title&gt;</mark> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)</li>
+            <li>The <mark>&lt;body&gt;</mark> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+            <li>The <mark>&lt;h1&gt;</mark> element defines a large heading</li>
+            <li>The <mark>&lt;p&gt;</mark> element defines a paragraph</li>
+        </ul>
+        <br></br>
+
+        <h1 style="color:#3399FF;">Text Formatting In HTML</h1>
+        <p>
+            Formatting elements were designed to display special types of text
+        </p>
+        
+
+        <p><strong><u>Bold Text</u></strong></p>
+        <p>The HTML element &lt;b&gt; defines bold text, without any extra importance.</p>
+        <p><strong><u>Italic Text</u></strong></p>
+        <p>The HTML element &lt;i&gt; defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.</p>
+        <p><strong><u>Emphasized Text</u></strong></p>
+        <p>The HTML element &lt;em&gt; defines emphasized text. The content inside is typically displayed in italic.</p>
+        <p><strong><u>Smaller Text</u></strong></p>
+        <p>The HTML element &lt;small&gt; defines smaller text.</p>
+        <p><strong><u>Highlighted Text</u></strong></p>
+        <p>The HTML element &lt;mark&gt; defines text that should be marked or highlighted.</p>
+        <p><strong><u>Deleted Text</u></strong></p>
+        <p>The HTML element &lt;del&gt; defines text that has been deleted from a document. Browsers will usually strike a line through deleted text.</p>
+        <p><strong><u>Subscript Text</u></strong></p>
+        <p>The HTML element &lt;sub&gt; defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font.</p>
+        <p><strong><u>Superscript Text</u></strong></p>
+        <p>The HTML element &lt;sup&gt; defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font.
+            
+        </p>
+
+
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/4ZunanytE88" style="padding: 20px">
+        </iframe>
+
+        <br>
+    </div>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+    
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <div class="content_btn">
+      <a href="/metadata"class="previous">&laquo; Previous</a>
+      <a href="/semantics" class="next">Next &raquo;</a>
+    </div>
+</body>

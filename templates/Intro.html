@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="css/contents.css"> 
+<body>
+  <div class="sidenav">
+    <h1>Contents</h1>
+        <button class="dropdown-btn">Introduction to Web Development
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/web_works">How the web works</a>
+          <a href="/intro">Introduction to Web Designing</a>
+          <a href="/run_files">Running HTML and CSS Files</a>
+        </div>
+
+        <button class="dropdown-btn">HTML
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/intro_to_html">Introduction to HTML</a>
+          <a href="/metadata">Metadata in HTML</a>
+          <a href="/textformat">Structure and Text Fomatting in HTML</a>
+          <a href="/semantics">HTML Semantics</a>
+          <a href="/html_forms">HTML Web Forms</a>
+        </div>
+        <button class="dropdown-btn">CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/basics_of_css">Basics of CSS</a>
+          <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+          <a href="/css_template">CSS Structure Template</a>
+        </div>
+        <button class="dropdown-btn">JavaScript
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/java_script_basics">What is JavaScript</a>
+          <a href="/java_script_objects">JavaScript Objects</a>
+          <a href="/java_script_frameworks">Web Frameworks</a>
+        </div>
+        <button class="dropdown-btn">Other
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/questions">Questions</a>
+        </div>
+  </div>
+
+  <!--Change the class so that you have more flexibility in HTML (note-->
+
+  <div class="contentmain">
+    <h1 style="color:#3399FF;">Introduction to Web Designing</h1>
+    <br><br>
+    <h3 style="color:#55D6AA">What is Website Design?</h3>
+    
+    <p>
+      Web designing has direct link to visual aspect of a web site. 
+      Effective web design is necessary to communicate ideas effectively.
+    </p>
+
+
+
+    <p>
+      Web design is the visual aesthetics and page layout of a website. It goes hand-in-hand with web development in the creation of a static website or dynamic web application.
+      Even if you don’t consider yourself a creative person, it’s still a good idea to learn web design.
+    </p>
+    <p>
+      No matter whether you want to make static websites or dynamic web applications, design is an important part of the process. The design is the first thing people notice when they arrive on a website, and if it’s not good enough, they’ll leave.
+      You don’t want to create a site that frustrates people, do you? 
+      If you do identify yourself as a creative person, you might even consider a career as a web designer. Today, there is a huge need for competent web designers with up-to-date skills. It’s not an opportunity to be sneezed at.  
+      Learn coding and you’ll be a valuable asset to many. But learn coding and design and you’ll be second to none!
+    </p>
+
+    <h3 style="color:#55D6AA">Web Design Overview</h3>
+    <p>
+      The web design process starts with a visual concept, which you could sketch by hand or with software like Photoshop. Then, you use HTML and CSS to build the website. HTML and CSS are the codes for writing web pages. HTML handles the basic structure and ‘bones’ of your page, while CSS handles the style and appearance.
+      If you’re a good web designer, you’ll also pay attention to concepts like responsive design, aesthetics, usability and accessibility when building your site.
+      Responsive design is a popular technique for making websites look good and function well on additional devices, like phones and tablets. It does this by setting different CSS rules for different browser widths.
+    </p>
+
+    <br><br>
+    
+    
+    <h2 style="color:#55D6AA">How can we help you?</h2>
+    
+    <p>
+      Click on the following links to learn more about HTML, CSS or JavaScript.
+    </p> 
+    <br>
+
+    <section class = "features">
+      <figure>
+        <a href="/intro_to_html">
+          <img src="img/HTMLlogo.png" alt="HTML tutorial" style="width:150px;height:150px;">
+        </a>
+      </figure>
+
+
+      <figure>
+        <a href="/basics_of_css">
+          <img src="img/CSSLogo.png" alt="HTML tutorial" style="width:150px;height:150px;">
+        </a>
+      </figure>
+
+      <figure>
+        <a href="/java_script_basics">
+          <img src="img/Javascriptlogo3.jpg" alt="HTML tutorial" style="width:150px;height:150px;">
+        </a>
+      </figure>
+    </section> 
+              
+  </div>
+  <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+  </script>
+  <div class="content_btn">
+    <a href="/web_works"class="previous">&laquo; Previous</a>
+    <a href="/run_files" class="next">Next &raquo;</a>
+  </div>
+</body>

@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/contents.css">
+<link rel="stylesheet" href="css/javascriptbasics.css">
+
+<body>
+    <div class="sidenav">
+      <h1>Contents</h1>
+      <button class="dropdown-btn">Introduction to Web Development
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/web_works">How the web works</a>
+        <a href="/intro">Introduction to Web Designing</a>
+        <a href="/run_files">Running HTML and CSS Files</a>
+      </div>
+
+      <button class="dropdown-btn">HTML
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/intro_to_html">Introduction to HTML</a>
+        <a href="/metadata">Metadata in HTML</a>
+        <a href="/textformat">Structure and Text Fomatting in HTML</a>
+        <a href="/semantics">HTML Semantics</a>
+        <a href="/html_forms">HTML Web Forms</a>
+      </div>
+      <button class="dropdown-btn">CSS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/basics_of_css">Basics of CSS</a>
+        <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+        <a href="/css_template">CSS Structure Template</a>
+      </div>
+      <button class="dropdown-btn">JavaScript
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/java_script_basics">What is JavaScript</a>
+        <a href="/java_script_objects">JavaScript Objects</a>
+        <a href="/java_script_frameworks">Web Frameworks</a>
+      </div>
+      <button class="dropdown-btn">Other
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/questions">Questions</a>
+      </div>
+    </div>
+
+    <div class="contentmain">
+        <h1 style="color:#3399FF;">JavaScript Objects</h1>
+        <p>
+            An object is a collection of properties, and a property is an association between a name (or key) and a value.
+            JavaScript objects are same as any other programming language. Example of JavaScript objects: A basketball is an object, with different properties. Different basketballs have different colors, designs/patterns, weight, are made of different material it is made of, etc. 
+            The same way, JavaScript objects can have properties, which define their characteristics of the respective object.
+        </p>
+            <p><u></uExample>Example JavaScript Objects:</u>
+                <p><i><li> All basketball have the same properties, but the property values differ from basketball to basketball.</li> 
+                    <li> All basketball have the same methods, but the methods are performed at different times.</li> 
+                </i>
+                </p>
+        <pre><code>var basketball = "Nike 2020";
+var basketball = {type:"Nike tournament", model:"2020", color:"brown"};</code></pre>
+        </p>
+        <h2 style="color:#55D6AA">JavaScript Objects "this" keyword</h2>
+        <p>
+            <li> "this" keyword refers to the "owner" of the function.</li> 
+            <li> "this" keyword refers to the global object.</li> 
+            <li> Methods like call(), and apply() can refer this to any object.</li> 
+        </p>
+    </div>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <div class="content_btn">
+      <a href="/java_script_basics"class="previous">&laquo; Previous</a>
+      <a href="/java_script_frameworks" class="next">Next &raquo;</a>
+    </div>
+</body>

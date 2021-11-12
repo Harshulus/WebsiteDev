@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/contents.css">
+<link rel="stylesheet" href="css/textFormatting.css">
+
+<body>
+    <div class="sidenav">
+      <h1>Contents</h1>
+      <button class="dropdown-btn">Introduction to Web Development
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/web_works">How the web works</a>
+        <a href="/intro">Introduction to Web Designing</a>
+        <a href="/run_files">Running HTML and CSS Files</a>
+      </div>
+
+      <button class="dropdown-btn">HTML
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/intro_to_html">Introduction to HTML</a>
+        <a href="/metadata">Metadata in HTML</a>
+        <a href="/textformat">Structure and Text Fomatting in HTML</a>
+        <a href="/semantics">HTML Semantics</a>
+        <a href="/html_forms">HTML Web Forms</a>
+      </div>
+      <button class="dropdown-btn">CSS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/basics_of_css">Basics of CSS</a>
+        <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+        <a href="/css_template">CSS Structure Template</a>
+      </div>
+      <button class="dropdown-btn">JavaScript
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/java_script_basics">What is JavaScript</a>
+        <a href="/java_script_objects">JavaScript Objects</a>
+        <a href="/java_script_frameworks">Web Frameworks</a>
+      </div>
+      <button class="dropdown-btn">Other
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/questions">Questions</a>
+      </div>
+    </div>
+
+    <div class="contentmain">
+        <h1 style="color:#3399FF;">Semantic Elements In HTML</h1>
+
+        <h2 style="color:#55D6AA">What are Semantic Elements?</h2>
+        <p>A semantic element clearly describes its meaning to both the browser and the developer.</p>
+        <p>Examples of <b>non-semantic</b> elements: &lt;div&gt; and &lt;span&gt; - Tells nothing about its content.</p>
+        <p>Examples of <b>semantic</b> elements: &lt;form&gt;, &lt;table&gt;, and &lt;article&gt; - Clearly defines its content.</p>
+
+        <p>Many web sites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer.</p>
+
+        <p>In HTML there are some semantic elements that can be used to define different parts of a web page: </p>
+        <ul>
+            <li>The <mark>&lt;article&gt;</mark> defines independent, self-contained content</li>
+            <li>The <mark>&lt;aside&gt;</mark> defines content aside from the page content</li>
+            <li>The <mark>&lt;details&gt;</mark> defines additional details that the user can view or hide</li>
+            <li>The <mark>&lt;footer&gt;</mark> defines a footer for a document or section</li>
+            <li>The <mark>&lt;header&gt;</mark> specifies a hearder for a document or section</li>
+            <li>The <mark>&lt;main&gt;</mark> specifies the main content of a document</li>
+            <li>The <mark>&lt;mark&gt;</mark> defines marked/highlighted text</li>
+            <li>The <mark>&lt;nav&gt;</mark> defines navigation links</li>
+            <li>The <mark>&lt;section&gt;</mark> defines a section in a document</li>
+            <li>The <mark>&lt;summary&gt;</mark> defines a visible heading for a &lt;details&gt; element</li>
+            <li>The <mark>&lt;time&gt;</mark> defines a date/time</li>
+            
+        </ul>
+        <h3>Basic Layout Using Semantics: </h3>
+        <p>
+            <img src="img/semantics.png" style="width: 300px; padding: 40px">
+        </p>
+        <br></br>
+        <div class="code-snippet">
+            <h2 style="color:#55D6AA">Some Examples Using Semantics: </h2>
+            <ol>
+                <li>HTML &lt;section&gt; Element: </li>
+            
+            <pre>Two sections in a document:
+
+&lt;section&gt;
+&lt;h1&gt;WWF&lt;/h1&gt;
+&lt;p&gt;The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+&lt;h1&gt;WWF's Panda symbol&lt;/h1&gt;
+&lt;p&gt;The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.&lt;/p&gt;
+&lt;/section&gt;
+
+            </pre>
+            <li>HTML &lt;article&gt; Element: </li>
+            <pre>Three articles with independent, self-contained content:
+
+&lt;article&gt;
+&lt;h2&gt;Google Chrome&lt;/h2&gt;
+&lt;p&gt;Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+&lt;h2&gt;Mozilla Firefox&lt;/h2&gt;
+&lt;p&gt;Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+&lt;h2&gt;Microsoft Edge&lt;/h2&gt;
+&lt;p&gt;Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.&lt;/p&gt;
+&lt;/article&gt;
+            </pre>
+            <li>HTML &lt;header&gt; Element: </li>
+            <pre>A header for an article:
+
+&lt;article&gt;
+&lt;header&gt;
+&lt;h1&gt;What Does WWF Do?&lt;/h1&gt;
+&lt;p&gt;WWF's mission:&lt;/p&gt;
+&lt;/header&gt;
+&lt;p&gt;WWF's mission is to stop the degradation of our planet's natural environment,
+and build a future in which humans live in harmony with nature.&lt;/p&gt;
+&lt;/article&gt;
+            </pre>
+            <li>HTML &lt;footer&gt; Element: </li>
+            <pre>A footer section in a document: 
+
+&lt;footer&gt;
+&lt;p&gt;Author: Hege Refsnes&lt;/p&gt;
+&lt;p&gt;&lt;a href="mailto:hege@example.com"&gt;hege@example.com&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;
+            </pre>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+    
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <div class="content_btn">
+      <a href="/textformat"class="previous">&laquo; Previous</a>
+      <a href="/html_forms" class="next">Next &raquo;</a>
+    </div>
+</body>

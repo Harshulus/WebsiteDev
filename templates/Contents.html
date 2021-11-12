@@ -1,0 +1,153 @@
+<style>
+  div.IndentFirst {
+    text-indent: 50px;
+  }
+
+  div.IndentSecond {
+      text-indent: 50px;
+  }
+
+  div.IndentThird {
+      text-indent: 50px;
+  }
+
+  div.IndentFourth{
+      text-indent: 50px;
+  }
+
+  div.IndentFifth{
+      text-indent: 50px;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
+<link rel="stylesheet" href="css/contents.css"> 
+<body>
+  <div class="sidenav">
+    <h1>Contents</h1>
+        <button class="dropdown-btn">Introduction to Web Development
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/web_works">How the web works</a>
+          <a href="/intro">Introduction to Web Designing</a>
+          <a href="/run_files">Running HTML and CSS Files</a>
+        </div>
+
+        <button class="dropdown-btn">HTML
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/intro_to_html">Introduction to HTML</a>
+          <a href="/metadata">Metadata in HTML</a>
+          <a href="/textformat">Structure and Text Fomatting in HTML</a>
+          <a href="/semantics">HTML Semantics</a>
+          <a href="/html_forms">HTML Web Forms</a>
+        </div>
+        <button class="dropdown-btn">CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/basics_of_css">Basics of CSS</a>
+          <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+          <a href="/css_template">CSS Structure Template</a>
+        </div>
+        <button class="dropdown-btn">JavaScript
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/java_script_basics">What is JavaScript</a>
+          <a href="/java_script_objects">JavaScript Objects</a>
+          <a href="/java_script_frameworks">Web Frameworks</a>
+        </div>
+        <button class="dropdown-btn">Other
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/questions">Questions</a>
+        </div>     
+  </div>
+
+
+
+  <!--WRITE COMMENT HERE-->
+  <!--Change the class so that you have more flexibility in HTML (note-->
+  <div class="contentmain">
+    <h2 style="color: #3399FF;">Welcome to the Contents Page</h2>
+    <br>
+
+    <div class="row">
+      <div class="column">
+        <h3 style="color: #9933ff">Introduction to Web Development</h3>
+        <div class="IndentFirst">
+          <li><a href="/web_works" style="color: #ffffff">How the Web Works</a></li>
+          <li><a href="/intro" style="color: #ffffff">Introduction to Web Development</a></li>
+          <li><a href="/run_files" style="color: #ffffff">Running HTML and CSS Files</a></li>
+        </div>
+      
+        <h3 style="color: #ff9933">HTML</h3>
+        <div class="IndentSecond">
+          <li><a href="/intro_to_html" style="color: #ffffff">Introduction to HTML</a></li>
+          <li><a href="/metadata" style="color: #ffffff">Metadata in HTML</a></li>
+          <li><a href="/textformat" style="color: #ffffff">Structure and Text Fomatting in HTML</a></li>
+          <li><a href="/semantics" style="color: #ffffff">HTML Semantics</a></li>
+          <li><a href="/html_forms" style="color: #ffffff">HTML Web Forms</a></li>          
+        </div>
+      </div>
+
+      <div class="column">
+        <h3 style="color: #55D6AA">CSS</h3>
+        <div class="IndentThird">
+          <li><a href="/basics_of_css" style="color: #ffffff">Basics of CSS</a></li>
+          <li><a href="/css_layout_and_formatting" style="color: #ffffff">CSS Layout and Formatting</a></li>
+          <li><a href="/css_template" style="color: #ffffff">CSS Structure Template</a></li>
+        </div>
+      
+        <h3 style="color: #ff33cc">JavaScript</h3>
+        <div class="IndentFourth">
+          <li><a href="/java_script_basics" style="color: #ffffff">What is JavaScript</a></li>
+          <li><a href="/java_script_objects" style="color: #ffffff">JavaScript Objects</a></li>
+          <li><a href="/java_script_frameworks" style="color: #ffffff">Web Frameworks</a></li>
+        </div>
+      
+        <h3 style="color: #ffff33">Other</h3>
+        <div class="IndentFifth">
+          <li><a href="/questions" style="color: #ffffff">Questions</a></li>
+        </div>
+      </div>
+    </div>
+    
+    <br>
+    <!-- </div> -->
+
+
+    <script>
+      /* #55d6aa Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+  </div>
+    
+</body>

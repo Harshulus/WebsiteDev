@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/contents.css">
+<link rel="stylesheet" href="css/javascriptbasics.css">
+
+<body>
+    <div class="sidenav">
+        <h1>Contents</h1>
+        <button class="dropdown-btn">Introduction to Web Development
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/web_works">How the web works</a>
+          <a href="/intro">Introduction to Web Designing</a>
+          <a href="/run_files">Running HTML and CSS Files</a>
+        </div>
+
+        <button class="dropdown-btn">HTML
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/intro_to_html">Introduction to HTML</a>
+          <a href="/metadata">Metadata in HTML</a>
+          <a href="/textformat">Structure and Text Fomatting in HTML</a>
+          <a href="/semantics">HTML Semantics</a>
+          <a href="/html_forms">HTML Web Forms</a>
+        </div>
+        <button class="dropdown-btn">CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/basics_of_css">Basics of CSS</a>
+          <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+          <a href="/css_template">CSS Structure Template</a>
+        </div>
+        <button class="dropdown-btn">JavaScript
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/java_script_basics">What is JavaScript</a>
+          <a href="/java_script_objects">JavaScript Objects</a>
+          <a href="/java_script_frameworks">Web Frameworks</a>
+        </div>
+        <button class="dropdown-btn">Other
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/questions">Questions</a>
+        </div>
+    </div>
+
+    <div class="contentmain">
+        <h1 style="color:#3399FF;">What is JavaScript?</h1>
+        <p>
+            JavaScript is the Programming Language used for the website designing.
+            It can be used to update and change both HTML and CSS files. HTML is used create a structure for the website and CSS is used for colour, layout and formating the content in HTML.
+        </p>
+        <br>
+
+        <h2 style="color:#55D6AA">How does JavaScript work?</h2>
+        <p>
+            The way JavaScript works is interesting. Inside a normal Web page you place some JavaScript code.
+            When the browser loads the page, the browser has a built-in interpreter that reads the JavaScript code it finds in the page and runs it.
+            Web sites gather information from users in online forms, and JavaScript can help validate entries.
+        </p>
+
+        <h2 style="color:#55D6AA">JavaScript Variables</h2>
+        <p>
+            JavaScript variables are containers for storing data values.
+        <p>
+
+        <p><strong><u>Numbers</u></strong></p>
+        <p><li>JavaScript has only one type of number. Numbers can be written with or without decimals. All numbers are stored as double precision floating point numbers.</li></p>
+        <p><strong><u>Strings</u></strong></p>
+        <p><li>Strings store text. Strings are written inside quotes. You can use single or double quotes.</li></p>
+        <p><strong><u>Objects</u></strong></p>
+        <p><li>This code assigns a simple value (Fiat) to a variable. Objects are variables too. But objects can contain many values.</li></p>
+        <p><strong><u>Arrays</u></strong></p>
+        <p><li>JavaScript arrays are used to store multiple values in a single variable.</li></p>
+        <p><strong><u>Functions</u></strong></p>
+        <p><li>A JavaScript function is a block of code designed to perform a particular task.</li></p>
+
+        <h2 style="color:#55D6AA">Uses of JavaScript:</h2>
+        <p>
+            <ol>
+            <li>Change HTML contents.</li>
+                <ul>
+                <li>One of many JavaScript HTML methods is getElementById().</li>
+            <p>Example of getElementById():
+        <pre><code>document.getElementById("website_demostration_info2222").innerHTML = "Hello, Welcome to JavaScript basics";</code></pre>
+            </p>
+                </ul>
+            <li>Change HTML attribute values.</li>
+            <li>Change HTML styles using CSS:</li>
+                <ul>
+                <pre><code>document.getElementById("website_demostration_info2222").style.fontSize = "100px";</code></pre>
+                </ul>
+
+            <li>Can hide or show HTML elements:</li>
+                <ul>
+                <pre><code>document.getElementById("website_demostration_info2222").style.display = "none";
+document.getElementById("website_demostration_info2222").style.display = "block";</code></pre>
+                </ul>
+            </ol>
+        <p>
+        <br>
+    </div>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <div class="content_btn">
+      <a href="/css_template"class="previous">&laquo; Previous</a>
+      <a href="/java_script_objects" class="next">Next &raquo;</a>
+    </div>
+</body>

@@ -1,0 +1,228 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/contents.css">
+<link rel="stylesheet" href="css/css_template.css">
+
+<body>
+    <div class="sidenav">
+        <h1>Contents</h1>
+        <button class="dropdown-btn">Introduction to Web Development
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/web_works">How the web works</a>
+          <a href="/intro">Introduction to Web Designing</a>
+          <a href="/run_files">Running HTML and CSS Files</a>
+        </div>
+
+        <button class="dropdown-btn">HTML
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/intro_to_html">Introduction to HTML</a>
+          <a href="/metadata">Metadata in HTML</a>
+          <a href="/textformat">Structure and Text Fomatting in HTML</a>
+          <a href="/semantics">HTML Semantics</a>
+          <a href="/html_forms">HTML Web Forms</a>
+        </div>
+        <button class="dropdown-btn">CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/basics_of_css">Basics of CSS</a>
+          <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+          <a href="/css_template">CSS Structure Template</a>
+        </div>
+        <button class="dropdown-btn">JavaScript
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/java_script_basics">What is JavaScript</a>
+          <a href="/java_script_objects">JavaScript Objects</a>
+          <a href="/java_script_frameworks">Web Frameworks</a>
+        </div>
+        <button class="dropdown-btn">Other
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/questions">Questions</a>
+        </div>
+    </div>
+
+    <div class="contentmain">
+        <h1 style="color:#3399FF;">CSS Template</h1>
+        <hr>
+        
+        <p>Here is a template made by us which you can use:</p>
+
+        <div class="left">
+            <h3 style="color:#55D6AA">HTML:</h3>
+            <pre>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/template.css&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;Template Page&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;!-- Header of the Page --&gt;
+        &lt;header&gt;
+            &lt;!-- Logo --&gt;
+            &lt;img src=&quot;Endeavour.png&quot; alt=&quot;logo&quot; class=&quot;logo&quot;&gt;
+            
+            &lt;!-- Navigation Menu --&gt;
+            &lt;nav&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;  
+        &lt;/header&gt;
+        &lt;br&gt;
+    
+        &lt;!-- Main content --&gt;
+        &lt;main&gt;
+            &lt;h1&gt;Heading&lt;/h1&gt;
+            &lt;p&gt;
+                Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry. Lorem Ipsum has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown 
+                printer took a galley of type and scrambled it to make a 
+                type specimen book.
+            &lt;/p&gt;
+
+            &lt;h2&gt;Sub Heading&lt;/h2&gt;
+            &lt;p&gt;
+                Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry. Lorem Ipsum has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown 
+                printer took a galley of type and scrambled it to make a 
+                type specimen book.
+            &lt;/p&gt;
+
+            &lt;hr&gt;
+
+            &lt;h1&gt;Heading&lt;/h1&gt;
+            &lt;p&gt;
+                Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry. Lorem Ipsum has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown 
+                printer took a galley of type and scrambled it to make a 
+                type specimen book.
+            &lt;/p&gt;
+
+            &lt;h2&gt;Sub Heading&lt;/h2&gt;
+            &lt;p&gt;
+                Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry. Lorem Ipsum has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown 
+                printer took a galley of type and scrambled it to make a 
+                type specimen book.
+            &lt;/p&gt;
+        &lt;/main&gt;
+    
+        &lt;!-- Footer Menu --&gt;
+        &lt;footer&gt;
+            &lt;p&gt;Template made by Endeavour&lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+        </div>
+
+        <div class="right">
+            <h3 style="color:#55D6AA">CSS:</h3>
+            <pre>html {
+    background-color: #e7e7e7;
+}
+
+header {
+    background-color: #4b4b4b;
+}
+
+body {
+    position: relative;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding-top: 68px;
+    padding-right: 5px;
+}
+    
+nav a {
+    display: block;
+    padding: 10px;
+    background-color: #4b4b4b;
+    color: white;
+    font-size: 18px;
+}
+
+.logo {
+    width: 200px;
+    padding: 10px 5px;
+}
+
+main {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 200px; /* double of footer */
+}
+
+footer {
+    background-color: #bbbbbb;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+footer p {
+    padding-left: 10px;
+}</pre>
+        </div>
+        <br clear=left>
+
+        <h3 style="color:#55D6AA">Page:</h3>
+        <div class="interactive">
+            <iframe src="/template" width="100%" height="600"></iframe>
+        </div>
+        
+        <br><br> 
+    </div>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+    
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <div class="content_btn">
+        <a href="/css_layout_and_formatting"class="previous">&laquo; Previous</a>
+        <a href="/java_script_basics" class="next">Next &raquo;</a>
+    </div>
+</body>
+

@@ -1,0 +1,1429 @@
+<link rel="stylesheet" href="css/contents.css"> 
+
+<body>
+  <div class="sidenav">
+    <h1>Contents</h1>
+        <button class="dropdown-btn">Introduction to Web Development
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/web_works">How the web works</a>
+          <a href="/intro">Introduction to Web Designing</a>
+          <a href="/run_files">Running HTML and CSS Files</a>
+        </div>
+
+        <button class="dropdown-btn">HTML
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/intro_to_html">Introduction to HTML</a>
+          <a href="/metadata">Metadata in HTML</a>
+          <a href="/textformat">Structure and Text Fomatting in HTML</a>
+          <a href="/semantics">HTML Semantics</a>
+          <a href="/html_forms">HTML Web Forms</a>
+        </div>
+        <button class="dropdown-btn">CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/basics_of_css">Basics of CSS</a>
+          <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+          <a href="/css_template">CSS Structure Template</a>
+        </div>
+        <button class="dropdown-btn">JavaScript
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/java_script_basics">What is JavaScript</a>
+          <a href="/java_script_objects">JavaScript Objects</a>
+          <a href="/java_script_frameworks">Web Frameworks</a>
+        </div>
+        <button class="dropdown-btn">Other
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/questions">Questions</a>
+        </div>    
+  </div>
+  <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+  </script>
+
+  <div class="mcq-section">
+    <center><h1 style="color:#3399FF;">MCQ QUIZ</h1></center>
+        <br><br>
+        <center><h2 style="color:#55D6AA">HTML</h2></center>
+        <br></br>
+
+        <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>What is fullform of HTML ?</h2> 
+        
+        <hr />
+
+        <div id='block-1' style='padding: 10px;'>
+          <label for='option-1' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='HighText Machine Language' id='option-1' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'HighText Machine Language'</label>
+          <span id='result-1'></span>
+        </div>
+        <hr />
+
+        <div id='block-2' style='padding: 10px;'>
+          <label for='option-2' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='HyperText and links Markup Language' id='option-2' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'HyperText and links Markup Language'</label>
+          <span id='result-2'></span>
+        </div>
+        <hr />
+      <div id='block-3' style='padding: 10px;'>
+          <label for='option-3' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='HyperText Markup Language' id='option-3' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'HyperText Markup Language'</label>
+          <span id='result-3'></span>
+        </div>
+        <hr />
+
+        <div id='block-4' style='padding: 10px;'>
+          <label for='option-4' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of these' id='option-4' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of these'</label>
+          <span id='result-4'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer1()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer1'></a>
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer1() {
+          if (document.getElementById('option-1').checked) {
+            document.getElementById('block-1').style.border = '3px solid red'
+            document.getElementById('result-1').style.color = 'red'
+            document.getElementById('result-1').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-2').checked) {
+            document.getElementById('block-2').style.border = '3px solid red'
+            document.getElementById('result-2').style.color = 'red'
+            document.getElementById('result-2').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-3').checked) {
+            document.getElementById('block-3').style.border = '3px solid limegreen'
+            document.getElementById('result-3').style.color = 'limegreen'
+            document.getElementById('result-3').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-4').checked) {
+            document.getElementById('block-4').style.border = '3px solid red'
+            document.getElementById('result-4').style.color = 'red'
+            document.getElementById('result-4').innerHTML = 'Incorrect!'
+            
+          }
+        }
+        
+      </script>
+
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>The correct sequence of HTML tags for starting a webpage is ?</h2>
+        
+        <hr />
+
+        <div id='block-5' style='padding: 10px;'>
+          <label for='option-5' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='Head, Title, HTML, body' id='option-5' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'Head, Title, HTML, body'</label>
+          <span id='result-5'></span>
+        </div>
+        <hr />
+
+        <div id='block-6' style='padding: 10px;'>
+          <label for='option-6' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='HTML, Body, Title, Head' id='option-6' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'HTML, Body, Title, Head'</label>
+          <span id='result-6'></span>
+        </div>
+        <hr />
+      <div id='block-7' style='padding: 10px;'>
+          <label for='option-7' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='HTML, Body, Title, Body' id='option-7' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'HTML, Body, Title, Body'</label>
+          <span id='result-7'></span>
+        </div>
+        <hr />
+
+        <div id='block-8' style='padding: 10px;'>
+          <label for='option-8' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='HTML, Head, Title, Body' id='option-8' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'HTML, Head, Title, Body'</label>
+          <span id='result-8'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer2()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer2'></a>
+      <script>
+        
+        
+        function displayAnswer2() {
+          if (document.getElementById('option-5').checked) {
+            document.getElementById('block-5').style.border = '3px solid red'
+            document.getElementById('result-5').style.color = 'red'
+            document.getElementById('result-5').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-6').checked) {
+            document.getElementById('block-6').style.border = '3px solid red'
+            document.getElementById('result-6').style.color = 'red'
+            document.getElementById('result-6').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-7').checked) {
+            document.getElementById('block-7').style.border = '3px solid red'
+            document.getElementById('result-7').style.color = 'red'
+            document.getElementById('result-7').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-8').checked) {
+            document.getElementById('block-8').style.border = '3px solid limegreen'
+            document.getElementById('result-8').style.color = 'limegreen'
+            document.getElementById('result-8').innerHTML = 'Correct!'
+           
+          }
+        }
+        
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2> What are the tags that should be used to make a text bold and underlined?</h2> 
+        
+        <hr />
+
+        <div id='block-9' style='padding: 10px;'>
+          <label for='option-9' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;b&gt;&lt;mark&gt;text&lt;/mark&gt;&lt;/b&gt;' id='option-9' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;b&gt;&lt;mark&gt;text&lt;/mark&gt;&lt;/b&gt;'</label>
+          <span id='result-9'></span>
+        </div>
+        <hr />
+
+        <div id='block-10' style='padding: 10px;'>
+          <label for='option-10' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;b&gt;&lt;u&gt;text&lt;/u&gt;&lt;/b&gt;' id='option-10' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;b&gt;&lt;u&gt;text&lt;/u&gt;&lt;/b&gt;'</label>
+          <span id='result-10'></span>
+        </div>
+        <hr />
+      <div id='block-11' style='padding: 10px;'>
+          <label for='option-11' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;b&gt;text&lt;/b&gt;' id='option-11' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;b&gt;text&lt;/b&gt;'</label>
+          <span id='result-11'></span>
+        </div>
+        <hr />
+
+        <div id='block-12' style='padding: 10px;'>
+          <label for='option-12' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;em&gt;&lt;mark&gt;text&lt;/mark&gt;&lt;/em&gt;' id='option-12' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;em&gt;&lt;mark&gt;text&lt;/mark&gt;&lt;/em&gt;'</label>
+          <span id='result-12'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer3()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer3'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer3() {
+          if (document.getElementById('option-9').checked) {
+            document.getElementById('block-9').style.border = '3px solid red'
+            document.getElementById('result-9').style.color = 'red'
+            document.getElementById('result-9').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-10').checked) {
+            document.getElementById('block-10').style.border = '3px solid limegreen'
+            document.getElementById('result-10').style.color = 'limegreen'
+            document.getElementById('result-10').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-11').checked) {
+            document.getElementById('block-11').style.border = '3px solid red'
+            document.getElementById('result-11').style.color = 'red'
+            document.getElementById('result-11').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-12').checked) {
+            document.getElementById('block-12').style.border = '3px solid red'
+            document.getElementById('result-12').style.color = 'red'
+            document.getElementById('result-12').innerHTML = 'Incorrect!'
+            
+          }
+        }
+        
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>How many heading tages are there in HTML?</h2> 
+        
+        <hr />
+
+        <div id='block-13' style='padding: 10px;'>
+          <label for='option-13' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='3' id='option-13' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '3'</label>
+          <span id='result-13'></span>
+        </div>
+        <hr />
+
+        <div id='block-14' style='padding: 10px;'>
+          <label for='option-14' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='8' id='option-14' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '8'</label>
+          <span id='result-14'></span>
+        </div>
+        <hr />
+      <div id='block-15' style='padding: 10px;'>
+          <label for='option-15' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='6' id='option-15' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '6'</label>
+          <span id='result-15'></span>
+        </div>
+        <hr />
+
+        <div id='block-16' style='padding: 10px;'>
+          <label for='option-16' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='2' id='option-16' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '2'</label>
+          <span id='result-16'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer4()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer4'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer4() {
+          if (document.getElementById('option-13').checked) {
+            document.getElementById('block-13').style.border = '3px solid red'
+            document.getElementById('result-13').style.color = 'red'
+            document.getElementById('result-13').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-14').checked) {
+            document.getElementById('block-14').style.border = '3px solid red'
+            document.getElementById('result-14').style.color = 'red'
+            document.getElementById('result-14').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-15').checked) {
+            document.getElementById('block-15').style.border = '3px solid limegreen'
+            document.getElementById('result-15').style.color = 'limegreen'
+            document.getElementById('result-15').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-16').checked) {
+            document.getElementById('block-16').style.border = '3px solid red'
+            document.getElementById('result-16').style.color = 'red'
+            document.getElementById('result-16').innerHTML = 'Incorrect!'
+            
+          }
+        }
+        
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>What tag is used to indicate the type of data being displayed?</h2> 
+        
+        <hr />
+
+        <div id='block-17' style='padding: 10px;'>
+          <label for='option-17' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;style&gt;' id='option-17' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;style&gt;'</label>
+          <span id='result-17'></span>
+        </div>
+        <hr />
+
+        <div id='block-18' style='padding: 10px;'>
+          <label for='option-18' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;code&gt;' id='option-18' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;code&gt;'</label>
+          <span id='result-18'></span>
+        </div>
+        <hr />
+      <div id='block-19' style='padding: 10px;'>
+          <label for='option-19' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;meta&gt;' id='option-19' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;meta&gt;'</label>
+          <span id='result-19'></span>
+        </div>
+        <hr />
+
+        <div id='block-20' style='padding: 10px;'>
+          <label for='option-20' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of these' id='option-' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of these'</label>
+          <span id='result-20'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer5()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer5'></a>
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer5() {
+          if (document.getElementById('option-17').checked) {
+            document.getElementById('block-17').style.border = '3px solid red'
+            document.getElementById('result-17').style.color = 'red'
+            document.getElementById('result-17').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-18').checked) {
+            document.getElementById('block-18').style.border = '3px solid red'
+            document.getElementById('result-18').style.color = 'red'
+            document.getElementById('result-18').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-19').checked) {
+            document.getElementById('block-19').style.border = '3px solid limegreen'
+            document.getElementById('result-19').style.color = 'limegreen'
+            document.getElementById('result-19').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-20').checked) {
+            document.getElementById('block-20').style.border = '3px solid red'
+            document.getElementById('result-20').style.color = 'red'
+            document.getElementById('result-20').innerHTML = 'Incorrect!' 
+            
+          }
+        }
+        
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>How do we use the meta tag to diplay the author's name?</h2> 
+        
+        <hr />
+
+        <div id='block-21' style='padding: 10px;'>
+          <label for='option-21' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;meta name = "author"&gt;' id='option-21' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;meta name = "author"&gt;'</label>
+          <span id='result-21'></span>
+        </div>
+        <hr />
+
+        <div id='block-22' style='padding: 10px;'>
+          <label for='option-22' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;meta content = "author"&gt;' id='option-22' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;meta content = "author"&gt;'</label>
+          <span id='result-22'></span>
+        </div>
+        <hr />
+      <div id='block-23' style='padding: 10px;'>
+          <label for='option-23' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;meta content = "description"&gt;' id='option-23' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;meta content = "description"&gt;'</label>
+          <span id='result-23'></span>
+        </div>
+        <hr />
+
+        <div id='block-24' style='padding: 10px;'>
+          <label for='option-24' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of these' id='option-24' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of these'</label>
+          <span id='result-24'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer6()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer6'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer6() {
+          if (document.getElementById('option-21').checked) {
+            document.getElementById('block-21').style.border = '3px solid limegreen'
+            document.getElementById('result-21').style.color = 'limegreen'
+            document.getElementById('result-21').innerHTML = 'Correct!'
+          }
+          if (document.getElementById('option-22').checked) {
+            document.getElementById('block-22').style.border = '3px solid red'
+            document.getElementById('result-22').style.color = 'red'
+            document.getElementById('result-22').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-23').checked) {
+            document.getElementById('block-23').style.border = '3px solid red'
+            document.getElementById('result-23').style.color = 'red'
+            document.getElementById('result-23').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-24').checked) {
+            document.getElementById('block-24').style.border = '3px solid red'
+            document.getElementById('result-24').style.color = 'red'
+            document.getElementById('result-24').innerHTML = 'Incorrect!'
+            
+          }
+        }
+        
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>Choose the correct non-semnatic elements:</h2> 
+        
+        <hr />
+
+        <div id='block-25' style='padding: 10px;'>
+          <label for='option-25' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='span,input' id='option-25' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'span,input'</label>
+          <span id='result-25'></span>
+        </div>
+        <hr />
+
+        <div id='block-26' style='padding: 10px;'>
+          <label for='option-26' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='div, label' id='option-26' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'div, label'</label>
+          <span id='result-26'></span>
+        </div>
+        <hr />
+      <div id='block-27' style='padding: 10px;'>
+          <label for='option-27' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='div, span' id='option-27' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'div, span'</label>
+          <span id='result-27'></span>
+        </div>
+        <hr />
+
+        <div id='block-28' style='padding: 10px;'>
+          <label for='option-28' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of these' id='option-28' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of these'</label>
+          <span id='result-28'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer7()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer7'></a>
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer7() {
+          if (document.getElementById('option-25').checked) {
+            document.getElementById('block-25').style.border = '3px solid red'
+            document.getElementById('result-25').style.color = 'red'
+            document.getElementById('result-25').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-26').checked) {
+            document.getElementById('block-26').style.border = '3px solid red'
+            document.getElementById('result-26').style.color = 'red'
+            document.getElementById('result-26').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-27').checked) {
+            document.getElementById('block-27').style.border = '3px solid limegreen'
+            document.getElementById('result-27').style.color = 'limegreen'
+            document.getElementById('result-27').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-28').checked) {
+            document.getElementById('block-28').style.border = '3px solid red'
+            document.getElementById('result-28').style.color = 'red'
+            document.getElementById('result-28').innerHTML = 'Incorrect!' 
+            
+          }
+        }
+        
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>Choose the correct semantics elements:</h2> 
+        
+        <hr />
+
+        <div id='block-29' style='padding: 10px;'>
+          <label for='option-29' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;span&gt;, &lt;table&gt;, &lttime&gt;' id='option-29' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;span&gt;, &lt;table&gt;, &lttime&gt;'</label>
+          <span id='result-29'></span>
+        </div>
+        <hr />
+
+        <div id='block-30' style='padding: 10px;'>
+          <label for='option-30' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;span&gt;, &lt;table&gt;' id='option-30' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;span&gt;, &lt;table&gt;'</label>
+          <span id='result-30'></span>
+        </div>
+        <hr />
+      <div id='block-31' style='padding: 10px;'>
+          <label for='option-31' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;form&gt;, &lt;div&gt;' id='option-31' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;form&gt;, &lt;div&gt;'</label>
+          <span id='result-31'></span>
+        </div>
+        <hr />
+
+        <div id='block-32' style='padding: 10px;'>
+          <label for='option-32' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;form&gt;, &lt;table&gt;, &lt;article&gt;' id='option-32' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;form&gt;, &lt;table&gt;, &lt;article&gt;'</label>
+          <span id='result-32'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer8()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer8'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer8() {
+          if (document.getElementById('option-29').checked) {
+            document.getElementById('block-29').style.border = '3px solid red'
+            document.getElementById('result-29').style.color = 'red'
+            document.getElementById('result-29').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-30').checked) {
+            document.getElementById('block-30').style.border = '3px solid red'
+            document.getElementById('result-30').style.color = 'red'
+            document.getElementById('result-30').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-31').checked) {
+            document.getElementById('block-31').style.border = '3px solid red'
+            document.getElementById('result-31').style.color = 'red'
+            document.getElementById('result-31').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-32').checked) {
+            document.getElementById('block-32').style.border = '3px solid limegreen'
+            document.getElementById('result-32').style.color = 'limegreen'
+            document.getElementById('result-32').innerHTML = 'Correct!'
+            
+          }
+        }
+        
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>Which semantic elements are used to define the header and footer?</h2> 
+        
+        <hr />
+
+        <div id='block-33' style='padding: 10px;'>
+          <label for='option-33' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of these' id='option-33' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of these'</label>
+          <span id='result-33'></span>
+        </div>
+        <hr />
+
+        <div id='block-34' style='padding: 10px;'>
+          <label for='option-34' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;footer&gt;' id='option-34' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;footer&gt;'</label>
+          <span id='result-34'></span>
+        </div>
+        <hr />
+      <div id='block-35' style='padding: 10px;'>
+          <label for='option-35' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;header&gt;' id='option-35' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;header&gt;'</label>
+          <span id='result-35'></span>
+        </div>
+        <hr />
+
+        <div id='block-36' style='padding: 10px;'>
+          <label for='option-36' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;header&gt; &lt;footer&gt;' id='option-36' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;header&gt; &lt;footer&gt;'</label>
+          <span id='result-36'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer9()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer9'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer9() {
+          if (document.getElementById('option-33').checked) {
+            document.getElementById('block-33').style.border = '3px solid red'
+            document.getElementById('result-33').style.color = 'red'
+            document.getElementById('result-33').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-34').checked) {
+            document.getElementById('block-34').style.border = '3px solid red'
+            document.getElementById('result-34').style.color = 'red'
+            document.getElementById('result-34').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-35').checked) {
+            document.getElementById('block-35').style.border = '3px solid red'
+            document.getElementById('result-35').style.color = 'red'
+            document.getElementById('result-35').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-36').checked) {
+            document.getElementById('block-36').style.border = '3px solid limegreen'
+            document.getElementById('result-36').style.color = 'limegreen'
+            document.getElementById('result-36').innerHTML = 'Correct!'
+            
+          }
+        }
+        
+      </script>
+
+      <center><h2 style="color:#55D6AA">CSS</h2></center>
+        <br></br>
+      
+        <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>CSS stands for?</h2> 
+        
+        <hr />
+
+        <div id='block-37' style='padding: 10px;'>
+          <label for='option-37' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='Cascade style sheets' id='option-37' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'Cascade style sheets'</label>
+          <span id='result-37'></span>
+        </div>
+        <hr />
+
+        <div id='block-38' style='padding: 10px;'>
+          <label for='option-38' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='Color and style sheets' id='option-38' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'Color and style sheets'</label>
+          <span id='result-38'></span>
+        </div>
+        <hr />
+      <div id='block-39' style='padding: 10px;'>
+          <label for='option-39' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='Cascading style sheets' id='option-39' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'Cascading style sheets'</label>
+          <span id='result-39'></span>
+        </div>
+        <hr />
+
+        <div id='block-40' style='padding: 10px;'>
+          <label for='option-40' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of the above' id='option-40' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of the above'</label>
+          <span id='result-40'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer10()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer10'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer10() {
+          if (document.getElementById('option-37').checked) {
+            document.getElementById('block-37').style.border = '3px solid red'
+            document.getElementById('result-37').style.color = 'red'
+            document.getElementById('result-37').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-38').checked) {
+            document.getElementById('block-38').style.border = '3px solid red'
+            document.getElementById('result-38').style.color = 'red'
+            document.getElementById('result-38').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-39').checked) {
+            document.getElementById('block-39').style.border = '3px solid limegreen'
+            document.getElementById('result-39').style.color = 'limegreen'
+            document.getElementById('result-39').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-40').checked) {
+            document.getElementById('block-40').style.border = '3px solid red'
+            document.getElementById('result-40').style.color = 'red'
+            document.getElementById('result-40').innerHTML = 'Incorrect!'
+            
+          }
+        }
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>Which of the following is the correct syntax for referring the external style sheet?</h2> 
+        
+        <hr />
+
+        <div id='block-41' style='padding: 10px;'>
+          <label for='option-41' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;style src = example.css&gt;' id='option-41' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;style src = example.css&gt;'</label>
+          <span id='result-41'></span>
+        </div>
+        <hr />
+
+        <div id='block-42' style='padding: 10px;'>
+          <label for='option-42' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;style src = "example.css"&gt;' id='option-42' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;style src = "example.css"&gt;'</label>
+          <span id='result-42'></span>
+        </div>
+        <hr />
+      <div id='block-43' style='padding: 10px;'>
+          <label for='option-43' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;stylesheet&gt; example.css &lt;/stylesheet&gt;' id='option-43' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;stylesheet&gt; example.css &lt;/stylesheet&gt;'</label>
+          <span id='result-43'></span>
+        </div>
+        <hr />
+
+        <div id='block-44' style='padding: 10px;'>
+          <label for='option-44' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;link rel="stylesheet" type="text/css" href="example.css"&gt;' id='option-44' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;link rel="stylesheet" type="text/css" href="example.css"&gt;'</label>
+          <span id='result-44'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer11()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer11'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer11() {
+          if (document.getElementById('option-41').checked) {
+            document.getElementById('block-41').style.border = '3px solid red'
+            document.getElementById('result-41').style.color = 'red'
+            document.getElementById('result-41').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-42').checked) {
+            document.getElementById('block-42').style.border = '3px solid red'
+            document.getElementById('result-42').style.color = 'red'
+            document.getElementById('result-42').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-43').checked) {
+            document.getElementById('block-43').style.border = '3px solid red'
+            document.getElementById('result-43').style.color = 'red'
+            document.getElementById('result-43').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-44').checked) {
+            document.getElementById('block-44').style.border = '3px solid limegreen'
+            document.getElementById('result-44').style.color = 'limegreen'
+            document.getElementById('result-44').innerHTML = 'Correct!'
+            
+          }
+        }
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2> The property in CSS used to change the background color of an element is -</h2> 
+        
+        <hr />
+
+        <div id='block-45' style='padding: 10px;'>
+          <label for='option-45' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='bgcolor&lt;style src = example.css&gt;' id='option-45' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'bgcolor'</label>
+          <span id='result-45'></span>
+        </div>
+        <hr />
+
+        <div id='block-46' style='padding: 10px;'>
+          <label for='option-46' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='color' id='option-46' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'color'</label>
+          <span id='result-46'></span>
+        </div>
+        <hr />
+      <div id='block-47' style='padding: 10px;'>
+          <label for='option-47' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='background-color' id='option-47' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'background-color'</label>
+          <span id='result-47'></span>
+        </div>
+        <hr />
+
+        <div id='block-48' style='padding: 10px;'>
+          <label for='option-48' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='All of the above' id='option-48' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'All of the above'</label>
+          <span id='result-48'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer12()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer12'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer12() {
+          if (document.getElementById('option-45').checked) {
+            document.getElementById('block-45').style.border = '3px solid red'
+            document.getElementById('result-45').style.color = 'red'
+            document.getElementById('result-45').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-46').checked) {
+            document.getElementById('block-46').style.border = '3px solid red'
+            document.getElementById('result-46').style.color = 'red'
+            document.getElementById('result-46').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-47').checked) {
+            document.getElementById('block-47').style.border = '3px solid limegreen'
+            document.getElementById('result-47').style.color = 'limegreen'
+            document.getElementById('result-47').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-48').checked) {
+            document.getElementById('block-48').style.border = '3px solid red'
+            document.getElementById('result-48').style.color = 'red'
+            document.getElementById('result-48').innerHTML = 'Incorrect!'
+            
+          }
+        }
+      </script>
+
+       <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>The property in CSS used to change the text color of an element is -</h2> 
+        
+        <hr />
+
+        <div id='block-49' style='padding: 10px;'>
+          <label for='option-49' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='text-style' id='option-49' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'text-style'</label>
+          <span id='result-49'></span>
+        </div>
+        <hr />
+
+        <div id='block-50' style='padding: 10px;'>
+          <label for='option-50' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='text-size' id='option-50' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'text-size'</label>
+          <span id='result-50'></span>
+        </div>
+        <hr />
+      <div id='block-51' style='padding: 10px;'>
+          <label for='option-51' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='font-size' id='option-51' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'font-size'</label>
+          <span id='result-51'></span>
+        </div>
+        <hr />
+
+        <div id='block-52' style='padding: 10px;'>
+          <label for='option-52' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of the above' id='option-52' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of the above'</label>
+          <span id='result-52'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer13()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer13'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer13() {
+          if (document.getElementById('option-49').checked) {
+            document.getElementById('block-49').style.border = '3px solid red'
+            document.getElementById('result-49').style.color = 'red'
+            document.getElementById('result-49').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-50').checked) {
+            document.getElementById('block-50').style.border = '3px solid limegreen'
+            document.getElementById('result-50').style.color = 'limegreen'
+            document.getElementById('result-50').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-51').checked) {
+            document.getElementById('block-51').style.border = '3px solid red'
+            document.getElementById('result-51').style.color = 'red'
+            document.getElementById('result-51').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-52').checked) {
+            document.getElementById('block-52').style.border = '3px solid red'
+            document.getElementById('result-52').style.color = 'red'
+            document.getElementById('result-52').innerHTML = 'Incorrect!'
+            
+          }
+        }
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>Which of the following property is used as the shorthand property for the padding properties?</h2> 
+        
+        <hr />
+
+        <div id='block-53' style='padding: 10px;'>
+          <label for='option-53' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='padding-left' id='option-53' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'padding-left'</label>
+          <span id='result-53'></span>
+        </div>
+        <hr />
+
+        <div id='block-54' style='padding: 10px;'>
+          <label for='option-54' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='padding-right' id='option-54' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'padding-right'</label>
+          <span id='result-54'></span>
+        </div>
+        <hr />
+      <div id='block-55' style='padding: 10px;'>
+          <label for='option-55' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='font-size' id='option-55' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'padding'</label>
+          <span id='result-55'></span>
+        </div>
+        <hr />
+
+        <div id='block-56' style='padding: 10px;'>
+          <label for='option-56' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='All of the above' id='option-56' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'All of the above'</label>
+          <span id='result-56'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer14()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer14'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer14() {
+          if (document.getElementById('option-53').checked) {
+            document.getElementById('block-53').style.border = '3px solid red'
+            document.getElementById('result-53').style.color = 'red'
+            document.getElementById('result-53').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-54').checked) {
+            document.getElementById('block-54').style.border = '3px solid red'
+            document.getElementById('result-54').style.color = 'red'
+            document.getElementById('result-54').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-55').checked) {
+            document.getElementById('block-55').style.border = '3px solid limegreen'
+            document.getElementById('result-55').style.color = 'limegreen'
+            document.getElementById('result-55').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-56').checked) {
+            document.getElementById('block-56').style.border = '3px solid red'
+            document.getElementById('result-56').style.color = 'red'
+            document.getElementById('result-56').innerHTML = 'Incorrect!'
+            
+          }
+        }
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>Are the negative values allowed in padding property?</h2> 
+        
+        <hr />
+
+        <div id='block-57' style='padding: 10px;'>
+          <label for='option-57' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='Yes' id='option-57' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'Yes'</label>
+          <span id='result-57'></span>
+        </div>
+        <hr />
+
+        <div id='block-58' style='padding: 10px;'>
+          <label for='option-58' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='No' id='option-58' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'No'</label>
+          <span id='result-58'></span>
+        </div>
+        <hr />
+      <div id='block-59' style='padding: 10px;'>
+          <label for='option-59' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='Cannot say' id='option-59' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'Cannot say'</label>
+          <span id='result-59'></span>
+        </div>
+        <hr />
+
+        <div id='block-60' style='padding: 10px;'>
+          <label for='option-60' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='Maybe' id='option-60' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'Maybe'</label>
+          <span id='result-60'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer15()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer15'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer15() {
+          if (document.getElementById('option-57').checked) {
+            document.getElementById('block-57').style.border = '3px solid red'
+            document.getElementById('result-57').style.color = 'red'
+            document.getElementById('result-57').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-58').checked) {
+            document.getElementById('block-58').style.border = '3px solid limegreen'
+            document.getElementById('result-58').style.color = 'limegreen'
+            document.getElementById('result-58').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-59').checked) {
+            document.getElementById('block-59').style.border = '3px solid red'
+            document.getElementById('result-59').style.color = 'red'
+            document.getElementById('result-59').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-60').checked) {
+            document.getElementById('block-60').style.border = '3px solid red'
+            document.getElementById('result-60').style.color = 'red'
+            document.getElementById('result-60').innerHTML = 'Incorrect!'
+            
+          }
+        }
+      </script>
+
+      <center><h2 style="color:#55D6AA">JavaScript</h2></center>
+        <br></br>
+
+        <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>Inside which HTML element do we put the JavaScript?</h2> 
+        
+        <hr />
+
+        <div id='block-61' style='padding: 10px;'>
+          <label for='option-61' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;script&gt;' id='option-61' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;script&gt;'</label>
+          <span id='result-61'></span>
+        </div>
+        <hr />
+
+        <div id='block-62' style='padding: 10px;'>
+          <label for='option-62' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;js&gt;' id='option-62' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;js&gt;'</label>
+          <span id='result-62'></span>
+        </div>
+        <hr />
+      <div id='block-63' style='padding: 10px;'>
+          <label for='option-63' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;javascript&gt;' id='option-63' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;javascript&gt;'</label>
+          <span id='result-63'></span>
+        </div>
+        <hr />
+
+        <div id='block-64' style='padding: 10px;'>
+          <label for='option-64' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;scripting&gt;' id='option-64' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;scripting&gt;'</label>
+          <span id='result-64'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer16()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer16'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer16() {
+          if (document.getElementById('option-61').checked) {
+            document.getElementById('block-61').style.border = '3px solid limegreen'
+            document.getElementById('result-61').style.color = 'limegreen'
+            document.getElementById('result-61').innerHTML = 'Correct!'
+          }
+          if (document.getElementById('option-62').checked) {
+            document.getElementById('block-62').style.border = '3px solid red'
+            document.getElementById('result-62').style.color = 'red'
+            document.getElementById('result-62').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-63').checked) {
+            document.getElementById('block-63').style.border = '3px solid red'
+            document.getElementById('result-63').style.color = 'red'
+            document.getElementById('result-63').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-64').checked) {
+            document.getElementById('block-64').style.border = '3px solid red'
+            document.getElementById('result-64').style.color = 'red'
+            document.getElementById('result-64').innerHTML = 'Incorrect!'
+            
+          }
+        }
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>Where is the correct place to insert a JavaScript?</h2> 
+        
+        <hr />
+
+        <div id='block-65' style='padding: 10px;'>
+          <label for='option-65' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='The &lt;body&gt; section' id='option-65' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'The &lt;body&gt; section'</label>
+          <span id='result-65'></span>
+        </div>
+        <hr />
+
+        <div id='block-66' style='padding: 10px;'>
+          <label for='option-66' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='Both the &lt;head&gt; section and &lt;body&gt; section' id='option-66' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'Both the &lt;head&gt; section and &lt;body&gt; section'</label>
+          <span id='result-66'></span>
+        </div>
+        <hr />
+      <div id='block-67' style='padding: 10px;'>
+          <label for='option-67' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='The &lt;head&gt; section' id='option-67' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'The &lt;head&gt; section'</label>
+          <span id='result-67'></span>
+        </div>
+        <hr />
+
+        <div id='block-68' style='padding: 10px;'>
+          <label for='option-68' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of the above' id='option-68' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of the above'</label>
+          <span id='result-68'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer17()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer17'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer17() {
+          if (document.getElementById('option-65').checked) {
+            document.getElementById('block-65').style.border = '3px solid red'
+            document.getElementById('result-65').style.color = 'red'
+            document.getElementById('result-65').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-66').checked) {
+            document.getElementById('block-66').style.border = '3px solid limegreen'
+            document.getElementById('result-66').style.color = 'limegreen'
+            document.getElementById('result-66').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-67').checked) {
+            document.getElementById('block-67').style.border = '3px solid red'
+            document.getElementById('result-67').style.color = 'red'
+            document.getElementById('result-67').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-68').checked) {
+            document.getElementById('block-68').style.border = '3px solid red'
+            document.getElementById('result-68').style.color = 'red'
+            document.getElementById('result-68').innerHTML = 'Incorrect!'
+            
+          }
+        }
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>What is the correct syntax for referring to an external script called "xxx.js"?</h2> 
+        
+        <hr />
+
+        <div id='block-69' style='padding: 10px;'>
+          <label for='option-69' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;script name="xxx.js"&gt;' id='option-69' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;script name="xxx.js"&gt;'</label>
+          <span id='result-69'></span>
+        </div>
+        <hr />
+
+        <div id='block-70' style='padding: 10px;'>
+          <label for='option-70' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;script src="xxx.js"&gt;' id='option-70' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;script src="xxx.js"&gt;'</label>
+          <span id='result-70'></span>
+        </div>
+        <hr />
+      <div id='block-71' style='padding: 10px;'>
+          <label for='option-71' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='&lt;script href="xxx.js"&gt;' id='option-71' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            '&lt;script href="xxx.js"&gt;'</label>
+          <span id='result-71'></span>
+        </div>
+        <hr />
+
+        <div id='block-72' style='padding: 10px;'>
+          <label for='option-72' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of the above' id='option-72' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of the above'</label>
+          <span id='result-72'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer18()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer18'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer18() {
+          if (document.getElementById('option-69').checked) {
+            document.getElementById('block-69').style.border = '3px solid red'
+            document.getElementById('result-69').style.color = 'red'
+            document.getElementById('result-69').innerHTML = 'Incorrect!'
+          }
+          if (document.getElementById('option-70').checked) {
+            document.getElementById('block-70').style.border = '3px solid limegreen'
+            document.getElementById('result-70').style.color = 'limegreen'
+            document.getElementById('result-70').innerHTML = 'Correct!'
+            
+          }
+          if (document.getElementById('option-71').checked) {
+            document.getElementById('block-71').style.border = '3px solid red'
+            document.getElementById('result-71').style.color = 'red'
+            document.getElementById('result-71').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-72').checked) {
+            document.getElementById('block-72').style.border = '3px solid red'
+            document.getElementById('result-72').style.color = 'red'
+            document.getElementById('result-72').innerHTML = 'Incorrect!'
+            
+          }
+        }
+      </script>
+
+      <div style='transform: scale(0.65); position: relative; top: -100px;'>
+        <h2>How do you create a function in JavaScript?</h2> 
+        
+        <hr />
+
+        <div id='block-73' style='padding: 10px;'>
+          <label for='option-73' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='function myFunction()' id='option-73' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'function myFunction()'</label>
+          <span id='result-73'></span>
+        </div>
+        <hr />
+
+        <div id='block-74' style='padding: 10px;'>
+          <label for='option-74' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='function:myFunction()' id='option-74' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'function:myFunction()'</label>
+          <span id='result-74'></span>
+        </div>
+        <hr />
+      <div id='block-75' style='padding: 10px;'>
+          <label for='option-75' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='None of these' id='option-75' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'None of these'</label>
+          <span id='result-75'></span>
+        </div>
+        <hr />
+
+        <div id='block-76' style='padding: 10px;'>
+          <label for='option-76' style=' padding: 5px; font-size: 1.5rem;'>
+            <input type='radio' name='option' value='function = myFunction()' id='option-76' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            'function = myFunction()'</label>
+          <span id='result-76'></span>
+        </div>
+        <hr />
+        <button type='button' onclick='displayAnswer19()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+      </div>
+      <a id='showanswer19'></a>
+
+      <script>
+
+        // The function evaluates the answer and displays result
+        // NOTE -  When chnaging the question change the red and limegreen colour, and the correct incorrect option accordingly.
+        function displayAnswer19() {
+          if (document.getElementById('option-73').checked) {
+            document.getElementById('block-73').style.border = '3px solid limegreen'
+            document.getElementById('result-73').style.color = 'limegreen'
+            document.getElementById('result-73').innerHTML = 'Correct!'
+          }
+          if (document.getElementById('option-74').checked) {
+            document.getElementById('block-74').style.border = '3px solid red'
+            document.getElementById('result-74').style.color = 'red'
+            document.getElementById('result-74').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-75').checked) {
+            document.getElementById('block-75').style.border = '3px solid red'
+            document.getElementById('result-75').style.color = 'red'
+            document.getElementById('result-75').innerHTML = 'Incorrect!'
+            
+          }
+          if (document.getElementById('option-76').checked) {
+            document.getElementById('block-76').style.border = '3px solid red'
+            document.getElementById('result-76').style.color = 'red'
+            document.getElementById('result-76').innerHTML = 'Incorrect!'
+            
+          }
+        }
+      </script>
+  </div>
+  <div class="content_btn">
+    <a href="/java_script_frameworks"class="previous">&laquo; Previous</a>
+  </div>
+</body>
+
+ <!-- 4) How many heading tages are there in HTML? -- harsh
+ans: 6
+5) What tag is used to indicate the type of data being displayed? -- aash
+ans: <meta>
+6) How do we use the meta tag to diplay the author's name? --harsh
+<meta name = "author">
+7)  Choose the correct non-semnatic elements: --aash
+ans: <div>, <span>
+8) Choose the correct semantics elements: -- harsh
+ans: <form>, <table>, <article>
+9) Which semantic elements are used to define the header and footer? --ash
+ans: <header> <footer>  -->

@@ -1,0 +1,54 @@
+<center>
+<h1 style="color: #3399FF;">Register</h1>
+<p>Make an account</p>
+<p>
+<form action="/register" method="post">
+    Username: <input name="username" type="text" id="username" />
+</br>
+    Password: <input name="password" type="password" id="password" />
+</br>
+    <input value="Register" type="submit" />
+</form>
+
+</p>
+
+</center>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>
+    $('form').submit(function () {
+
+        // Get the message content and trim it
+        var register_username = $.trim($('#username').val());
+        var register_password = $.trim($('#password').val());
+
+        // Check if empty of not
+        if (register_username == '') {
+            alert('Username cannot be empty.');
+            $('input[name="username"]').val("");
+            return false;
+        }
+        else if (register_password == '') {
+            alert('Password cannot be empty.');
+            $('input[name="password"]').val("");
+            return false;
+        }
+
+        username_arr = register_username.split("")
+        password_arr = register_password.split("")
+        for (i = 0; i < username_arr.length; i++) {
+            if (username_arr[i] == ' ') {
+                alert('Username cannot have a space.');
+                return false;
+            }
+        }
+        for (i = 0; i < password_arr.length; i++) {
+            if (password_arr[i] == ' ') {
+                alert('Password cannot have a space.');
+                return false;
+            }
+        }
+
+    });
+</script>
+

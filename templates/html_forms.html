@@ -1,0 +1,169 @@
+<link rel="stylesheet" href="css/contents.css"> 
+<link rel="stylesheet" href="css/html_forms.css">
+<body>
+    <div class="sidenav">
+      <h1>Contents</h1>
+      <button class="dropdown-btn">Introduction to Web Development
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/web_works">How the web works</a>
+        <a href="/intro">Introduction to Web Designing</a>
+        <a href="/run_files">Running HTML and CSS Files</a>
+      </div>
+
+      <button class="dropdown-btn">HTML
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/intro_to_html">Introduction to HTML</a>
+        <a href="/metadata">Metadata in HTML</a>
+        <a href="/textformat">Structure and Text Fomatting in HTML</a>
+        <a href="/semantics">HTML Semantics</a>
+        <a href="/html_forms">HTML Web Forms</a>
+      </div>
+      <button class="dropdown-btn">CSS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/basics_of_css">Basics of CSS</a>
+        <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+        <a href="/css_template">CSS Structure Template</a>
+      </div>
+      <button class="dropdown-btn">JavaScript
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/java_script_basics">What is JavaScript</a>
+        <a href="/java_script_objects">JavaScript Objects</a>
+        <a href="/java_script_frameworks">Web Frameworks</a>
+      </div>
+      <button class="dropdown-btn">Other
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="/questions">Questions</a>
+      </div>     
+    </div>
+    
+    <!--WRITE COMMENT HERE-->
+    <!--Change the class so that you have more flexibility in HTML (note-->
+    <div class="contentmain">
+        <h1 style="color:#3399FF;">HTML Web Forms</h1>
+        <br>
+        <p>Forms are used to allow for user inputs. There are different types of forms such as: textbox, checkbox and radio buttons.</p>
+        <p>
+            These forms can be created with the tag <code>&lt;form&gt;</code>
+            and the contents inside the forms can be changed with the tags
+            <code>&lt;input type=&quot;text&quot;&gt;</code>, 
+            <code>&lt;input type=&quot;checkbox&quot;&gt;</code>, 
+            <code>&lt;input type=&quot;radio&quot;&gt;</code> and 
+            <code>&lt;input type=&quot;radio&quot;&gt;</code>.
+        </p>
+        
+        <h2 style="color:#55D6AA">Textbox</h2>
+        <p>This allows for users to type inside the field.</p>
+        <pre><code>&lt;form action=&quot;/handler.php&quot;&gt;
+    &lt;label for=&quot;box&quot;&gt;Textbox:&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type=&quot;text&quot; id=&quot;box1&quot; name=&quot;box1&gt;
+    &lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+        <div class="form_example">
+            <form onsubmit="return false;"></form>
+                <label for="box">Textbox:</label>
+                <br>
+                <input type="text" id="box" name="box">
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <!-- <img src="img/textbox_form.png" alt="Textbox Form" style="width:250px;">  -->
+
+        <br><br>
+        <h2 style="color:#55D6AA">Checkbox</h2>
+        <p>This allows for users to select multiple options.</p>
+        <pre><code>&lt;form action=&quot;/handler.php&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;option1&quot; name=&quot;option1&quot; value=&quot;option1&quot;&gt;
+    &lt;label for=&quot;option1&quot;&gt;Option 1&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;option2&quot; name=&quot;option2&quot; value=&quot;option2&quot;&gt;
+    &lt;label for=&quot;option2&quot;&gt;Option 2&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;option3&quot; name=&quot;option3&quot; value=&quot;option3&quot;&gt;
+    &lt;label for=&quot;option3&quot;&gt;Option 3&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+        <div class="form_example">
+            <form onsubmit="return false;">
+                <input type="checkbox" id="option1" name="option1" value="option1">
+                <label for="option1">Option 3</label>
+                <br>
+                <input type="checkbox" id="option2" name="option2" value="option2">
+                <label for="option2">Option 3</label>
+                <br>
+                <input type="checkbox" id="option3" name="option3" value="option3">
+                <label for="option3">Option 3</label>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <!-- <img src="img/checkbox.png" alt="Textbox Form" style="width:150px;"> -->
+        
+        <br>
+        <h2 style="color:#55D6AA">Radio Buttons</h2>
+        <p>This allows for users to select only one option.</p>
+        <pre><code>&lt;form action=&quot;/handler.php&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;option1&quot; name=&quot;option&quot; value=&quot;option1&quot;&gt;
+    &lt;label for=&quot;option1&quot;&gt;Option 1&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;option2&quot; name=&quot;option&quot; value=&quot;option2&quot;&gt;
+    &lt;label for=&quot;option2&quot;&gt;Option 2&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;option3&quot; name=&quot;option&quot; value=&quot;option3&quot;&gt;
+    &lt;label for=&quot;option3&quot;&gt;Option 3&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+        <div class="form_example">
+            <form onsubmit="return false;">
+                <input type="radio" id="option1" name="option" value="option1">
+                <label for="option1">Option 1</label>
+                <br>
+                <input type="radio" id="option2" name="option" value="option2">
+                <label for="option2">Option 2</label>
+                <br>
+                <input type="radio" id="option3" name="option" value="option3">
+                <label for="option3">Option 3</label>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <!-- <img src="img/radiobuttons.png" alt="Textbox Form" style="width:150px;">  -->
+        <br>
+        <br>
+        <script>
+          /* #55d6aa Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+          var i;
+          
+          for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+            });
+          }
+        </script>
+    </div>
+    <div class="content_btn">
+      <a href="/semantics"class="previous">&laquo; Previous</a>
+      <a href="/basics_of_css" class="next">Next &raquo;</a>
+    </div>
+</body>

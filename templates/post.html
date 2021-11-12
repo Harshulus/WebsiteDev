@@ -1,0 +1,107 @@
+<link rel="stylesheet" href="css/post.css">
+<body>
+    <div class="main_body">
+        <div class="post_top">
+            <h1 style="color:#3399FF;">Forum</h1>
+        </div>
+
+        <div class="post">
+            <div class="post_header">
+
+            </div>
+            
+            <form action="/post" method="post">
+                <div class="comment_input">
+                    <input name="comment" type="text" id="comment">
+                </div>
+                <br>
+                <div class="comment_btn">
+                    <input value="Comment" type="submit">
+                </div>
+            </form>
+
+            <div class="comments">
+
+            </div>
+        </div>
+        <script src="js/forum.js"></script>
+        <script>
+            var all_posts = ${all_posts}
+
+            var id = window.location.search.slice(1);
+            var post = all_posts.find(p => p.id == id)
+            var header = document.querySelector('.post_header')
+            console.log(post);
+            var headerHtml = `
+                <h3 class="post_title">
+                    ${post.title}
+                </h3>
+                <div class="post_bottom">
+                    <p class="author">
+                        ${post.author}
+                    </p>
+                    <p class="time">
+                        ${post.date}
+                    </p>
+                    <p class="comment_count">
+                        ${post.comments.length} comments
+                    </p>
+                </div>
+                <p class="content">
+                    ${post.content}
+                </p>
+                <br>
+                <hr>
+                <h4 style="color:#55D6AA">
+                    Comments
+                </h4>
+            `
+            header.insertAdjacentHTML('beforeend', headerHtml);
+
+            function addComment(comment) {
+                var commentHtml = `
+                    <div class="comment">
+                        <div class="top_comment">
+                            <p class="user">
+                                ${comment.author}
+                            </p>
+                            <p class="comment_time">
+                                ${comment.date}
+                            </p>
+                        </div>
+                        <div class="comment_message">
+                            ${comment.content}
+                        </div>
+                    </div>
+                `
+                comments.insertAdjacentHTML('beforeend', commentHtml);
+            }
+
+            var comments = document.querySelector('.comments')
+            for (let comment of post.comments) {
+                addComment(comment)
+            }
+
+            var comment_button = document.querySelector('.comment_btn')
+            post_id = `
+                <input value=${id} name="post_id" id="post_id" type="hidden">
+            `
+            comment_button.insertAdjacentHTML('beforeend', post_id);
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>
+            $('form').submit(function () {
+
+                // Get the message content and trim it
+                var msg = $.trim($('#comment').val());
+
+                // Check if empty of not
+                if (msg == '') {
+                    alert('Required to have some content.');
+                    $('input[name="comment"]').val("");
+                    return false;
+                }
+            });
+        </script>
+    </div>
+</body>

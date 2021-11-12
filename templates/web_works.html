@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="css/contents.css"> 
+<body>
+  <div class="sidenav">
+    <h1>Contents</h1>
+    <button class="dropdown-btn">Introduction to Web Development
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/web_works">How the web works</a>
+      <a href="/intro">Introduction to Web Designing</a>
+      <a href="/run_files">Running HTML and CSS Files</a>
+    </div>
+
+    <button class="dropdown-btn">HTML
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/intro_to_html">Introduction to HTML</a>
+      <a href="/metadata">Metadata in HTML</a>
+      <a href="/textformat">Structure and Text Fomatting in HTML</a>
+      <a href="/semantics">HTML Semantics</a>
+      <a href="/html_forms">HTML Web Forms</a>
+    </div>
+    <button class="dropdown-btn">CSS
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/basics_of_css">Basics of CSS</a>
+      <a href="/css_layout_and_formatting">CSS Layout and Formatting</a>
+      <a href="/css_template">CSS Structure Template</a>
+    </div>
+    <button class="dropdown-btn">JavaScript
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/java_script_basics">What is JavaScript</a>
+      <a href="/java_script_objects">JavaScript Objects</a>
+      <a href="/java_script_frameworks">Web Frameworks</a>
+    </div>
+    <button class="dropdown-btn">Other
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/questions">Questions</a>
+    </div>  
+  </div>
+  
+  <!--WRITE COMMENT HERE-->
+  <!--Change the class so that you have more flexibility in HTML (note-->
+  <div class="contentmain">
+    <h1 style="color:#3399FF;">How the Web Works</h1>
+    <br>
+    
+    <h2 style="color:#55D6AA">Clients and Servers</h2>
+    <div class="content-padding">
+        <p>
+            The web consists of a client and a server which interact with each other. 
+            The interaction between the server and client is just a simple request and respond 
+            system, where the client requests something, e.g. clicking on a hyperlink. The 
+            server responds by redirecting the user. The clients are typically internet users 
+            who access the website through a browser. Servers are computers that store webpages, 
+            sites, or apps.
+        </p>
+    </div>
+    <img src="img/webserver.png" alt="Server" style="width:500px;"> 
+    <br><br>   
+    <h2 style="color:#55D6AA">Other Parts of the Web</h2>
+    <ul>
+        <li><u><b>Internet connection</b></u> - Allows you to send and receive data on the web.</li>
+        <li><u><b>Transmission Control Protocol and Internet Protocol (TCP/IP)</b></u>: It is the communication protocols that define how data should travel across the internet.</li>
+        <li><u><b>Domain Name Server (DNS)</b></u> - DNS is a database which keeps track of the IP addresses of websites. 
+            It is easier to remember the addresses, e.g. www.google.com.au, rather than the IP address of the website.</li>
+        <li><u><b>Hypertext Transfer Protocol (HTTP)</b></u> - It is an application protocol that defines a language for clients and servers to speak to each other.</li>
+        <li><u><b>Uniform Resource Locators (URL)</b></u>: It specifies the protocol, hostname and filename.</li>
+        <li><u><b>Code files</b></u> - The language used for the files is mainly HTML, CSS and JavaScript</li>
+        <li><u><b>Assets</b></u> - This is all the multimedia files such as images, audio, video, etc.</li>
+        <li><u><b>Packets</b></u> - It is the terminology used to describe the data sent to the client from the server.</li>
+    </ul>
+
+    <br>
+    <h2 style="color:#55D6AA">The Interaction Between Server and Clients</h2>
+    <ol>
+        <li>The browser will find the address of the server from the DNS server.</li>
+        <li>The browser will request for a copy of the website using a TCP/IP.</li>
+        <li>The server will approve of the request and send a message consisting of “200 OK”.</li>
+        <li>The server will then send the files of the website to the browser in a series of small chunks called data packets.</li>
+        <li>The browser compiles the chunks into the whole website and displays for the user.</li>
+    </ol>               
+    <br><br><br>
+    
+    <script>
+      /* #55d6aa Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+  </div>
+  <div class="content_btn">
+    <a href="/intro" class="next">Next &raquo;</a>
+  </div>
+
+</body>
+
